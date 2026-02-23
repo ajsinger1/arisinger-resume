@@ -1,0 +1,138 @@
+% Resume - Ari Singer
+% Build with: xelatex resume.tex
+
+\documentclass[10pt]{article}
+\usepackage[letterpaper, hmargin=1.25cm, vmargin=0.75cm]{geometry}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{fontawesome5}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{TeX Gyre Termes}
+\setsansfont[Scale=MatchLowercase]{TeX Gyre Termes}
+
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{506266}
+\definecolor{text1}{HTML}{2b2b2b}
+\definecolor{headings}{HTML}{701112}
+\hypersetup{colorlinks, breaklinks, urlcolor=linkcolor, linkcolor=linkcolor}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+\usepackage{titlesec}
+\titleformat{\section}{\color{headings}
+\scshape\Large\raggedright}{}{0em}{}[\color{black}\titlerule]
+\titlespacing{\section}{0pt}{5pt}{3pt}
+
+\usepackage{enumitem}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\color{text1}
+\thispagestyle{empty}
+
+% --- Header ---
+{\centering
+  {\sffamily\Huge Ari Singer}\\[5pt]
+  \faEnvelope\ \href{mailto:me@arisinger.net}{me@arisinger.net}
+  \quad $|$ \quad
+  \faPhone*\ +1 248-763-8364\\[3pt]
+  \faLinkedin\ \href{https://linkedin.com/in/ari-singer}{LinkedIn}
+  \quad $|$ \quad
+  \faGithub\ \href{https://github.com/ajsinger1}{GitHub}
+  \quad $|$ \quad
+  \faGlobe\ \href{https://arisinger.dev}{arisinger.dev}
+  \\[3pt]
+  \faHome\ New York, NY\\[6pt]
+}
+
+% --- Experience ---
+\section{Experience}
+
+\textbf{AMAZON} \hfill New York, NY\\[1pt]
+\textit{Software Development Engineer II} \hfill \textsc{June 2025 --- Present}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt, parsep=1pt]
+  \item Built a production LLM inference platform end-to-end in two weeks, leading technical direction across principal-level engineers (L7/L8) --- disaggregated serving with Nvidia Dynamo, KV-aware routing, and a custom orchestration layer supporting A/B deployments, fault tolerance, and rate limiting, fully IaC on Kubernetes (AWS CDK)
+  \item Owned production hardening including observability (metrics, dashboards, alarms), security compliance, air-gapped VPC networking, and open-source dependency mirroring
+  \item Shipped an agent playground (Streamlit) and demo agents (LangChain) to showcase model capabilities to leadership
+  \item Supported post-training and evaluation efforts --- ran SFT jobs with Verl and debugged training pipeline issues for research scientists
+\end{itemize}
+
+\vspace{1pt}
+\textit{Software Development Engineer I} \hfill \textsc{March 2024 --- June 2025}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt, parsep=1pt]
+  \item Implemented an asynchronous pipeline that routed 100K+ ad creatives through AI-based transformation services, converting assets into new format-compliant variants --- unlocked hundreds of millions of new DSP impressions and significant incremental annual revenue
+\end{itemize}
+
+\vspace{1pt}
+\textit{Software Development Engineer Intern} (Seattle, WA) \hfill \textsc{May 2022 --- August 2022}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt, parsep=1pt]
+  \item Automated QA testing with a pipeline using SQS, Lambda, and AWS Device Farm to capture ad asset interactions (taps, swipes, presses) and push screen recordings to S3 --- reduced QA cycle time from hours to minutes
+  \item Created an internal web GUI for QA testers to submit automation jobs and review results, replacing a fully manual process
+\end{itemize}
+
+\vspace{1pt}
+\textit{Software Development Engineer Intern} (Remote) \hfill \textsc{May 2021 --- August 2021}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt, parsep=1pt]
+  \item Developed an automation layer that pulled Fire TV and Fire Tablet ad campaign data from S3, transformed and enriched the data, and wrote results to DynamoDB
+\end{itemize}
+
+\rule{\textwidth}{0.2pt}
+
+\textbf{UNIVERSITY OF MICHIGAN} \hfill Ann Arbor, MI\\[1pt]
+\textit{Graduate Student Instructor} \hfill \textsc{August 2023 --- May 2024}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt, parsep=1pt]
+  \item EECS 441 --- Mobile App Development: grading, lectures, office hours
+\end{itemize}
+
+\vspace{1pt}
+\textit{Graduate Researcher} \hfill \textsc{June 2023 --- May 2024}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt, parsep=1pt]
+  \item Developed and deployed agentic LLM applications for K--12 classrooms before frameworks like LangChain existed --- implemented chain-of-thought prompting and context management, deployed to real classrooms with the Center for Digital Curricula
+\end{itemize}
+
+\vspace{1pt}
+\textit{Undergraduate Researcher} \hfill \textsc{January 2021 --- December 2021}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt, parsep=1pt]
+  \item Studied reinforcement learning techniques for tuning inkjet printer parameters within a multidisciplinary team
+\end{itemize}
+
+% --- Projects ---
+\section{Projects}
+
+\textbf{Smart Door Handle} \hfill \href{https://github.com/ajsinger1/eecs473-smart-door}{GitHub}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt, parsep=1pt]
+  \item Engineered a smart door handle with MCU firmware (C), cloud backend (Python), and a companion mobile app (React Native) --- handled embedded programming, wireless communication, and full-stack integration (EECS 473: Advanced Embedded Systems)
+\end{itemize}
+
+% --- Education ---
+\section{Education}
+
+\textbf{UNIVERSITY OF MICHIGAN} \hfill Ann Arbor, MI\\[1pt]
+\textit{Master of Science in Engineering in Computer Science} \hfill \textsc{May 2024}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt, parsep=1pt]
+  \item GPA: 3.90/4.00
+\end{itemize}
+
+\vspace{1pt}
+\textit{Bachelor of Science in Engineering in Computer Science, Math Minor} \hfill \textsc{May 2023}
+\begin{itemize}[leftmargin=*, nosep, topsep=2pt, parsep=1pt]
+  \item GPA: 3.95/4.00 (Summa Cum Laude)
+\end{itemize}
+
+\vspace{1pt}
+\textit{Relevant Coursework:} Operating Systems, Machine Learning, Natural Language Processing, Systems of Generative AI, Compilers, Computer Architecture, Cryptography, Computer Networks, Web Systems\\
+
+% --- Skills ---
+\section{Skills and Technologies}
+
+\begin{tabular}{r l}
+\textsc{Languages} & Python, Java, C++, C, Typescript/Javascript, Bash, SQL\\
+\textsc{Infrastructure} & AWS, Kubernetes, Docker, Linux, Git, vLLM, Nvidia Dynamo, Verl\\
+\textsc{Frameworks} & LangChain, Streamlit, React.js, pytest\\
+\end{tabular}
+
+\end{document}
